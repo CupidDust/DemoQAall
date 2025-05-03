@@ -38,19 +38,8 @@ public class Sortable
 				.perform();
 				
 //				Taking screenshot
-				File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-				try
-				{
-					File dest = new File("./Screenshots/drag1to3.png");
-					dest.getParentFile().mkdir();
-					FileUtils.copyFile(src, dest);
-					System.out.println("scrnsht captured");
-				}
-				catch(Exception e)
-				{
-					System.out.println(e.getMessage());
-				}
-				break;
+				Selectable s1 = new Selectable();
+				s1.screenShot(driver);
 			}
 		}
 	}
